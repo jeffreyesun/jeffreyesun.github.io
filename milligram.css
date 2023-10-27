@@ -1034,7 +1034,7 @@
 
 .paper-title {
   font-family: 'Helvetica', Sans-Serif;
-  font-size: 1.25rem;
+  font-size: 1.25rem !important;
   letter-spacing: 0rem;
   margin-left: 3vw;
   margin-right: 3vw;
