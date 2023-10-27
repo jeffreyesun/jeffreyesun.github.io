@@ -992,7 +992,7 @@
    text-align: center;
    margin-bottom: 0px;
    font-family: 'helvetica', serif;
-   font-size: 1.5rem;
+   font-size: 1.25rem;
  }
  
  
@@ -1129,9 +1129,8 @@
  
  .menu-nav-toggle span, .menu-nav-toggle span:before, .menu-nav-toggle span:after {
    display: block;
-   background: #333;
+   background: white;
    width: 2rem;
-   border-radius: 0.125rem;
    position: relative;
    height: 0.25rem;
  }
@@ -1161,7 +1160,7 @@
  
  .forward {
    font-family: 'Helvetica', Sans-Serif;
-   font-size: 11pt;
+   font-size: 1.25rem;
    margin-left: 3vw;
    margin-right: 3vw;
    line-height: 1.75rem;
