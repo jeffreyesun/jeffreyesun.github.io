@@ -319,6 +319,40 @@
    }
  }
  
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.125rem !important;
+  }
+  h3 {
+    font-size: 1.125rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.125rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  h3 {
+    font-size: 1.25rem !important;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.125rem !important;
+  }
+  h2 {
+    font-size: 1.875rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+ 
  .row {
    display: flex;
    flex-direction: column;
@@ -660,7 +694,7 @@
  .church-title {
    padding: 21px 0;
    font-family: 'Merriweather', 'serif';
-   color: var(--light-cream);
+   color: white;
  }
  
  .church-title:hover {
@@ -776,8 +810,9 @@
  }
  
  .about-title {
-   margin-left: 21px;
-   text-align: start;
+  font-size: 2rem !important;
+  margin-left: 21px;
+  text-align: start;
  }
  
  .about-sub-title {
@@ -1109,7 +1144,7 @@
  
  .nav-brand {
    font-family: 'Merriweather', serif;
-   color: var(--light-cream);
+   color: white;
    padding-right: 7vw;
  }
  
