@@ -109,22 +109,22 @@
   
   <p type="button" class="collapsible">Numerical Methods Overview</p>
   <div class="collapsible-content">
-    <p>The primary numerical methods contribution in this paper is the use of deep learning (neural networks) to solve for prices and household conditional continuation values, as a function of aggregate uncertainty, given the aggregate state. I am writing this method up in a separate paper, but the code is available now.</p>
+    <p>The primary numerical methods contribution in this paper is the use of deep learning (neural networks) to solve for prices and household conditional continuation values, as a function of aggregate uncertainty, given the aggregate state. I am writing this method up in a separate paper, but the code is <a href="https://github.com/jeffreyesun/continuation-value-is-all-you-need">available now</a>.</p>
     <p>The key insight of the deep learning method is that, if a household knows the current utility and continuation values resulting from any action, then conventional methods can be used to solve the policy function. With one or two dimensions of heterogeneity, this is generally no problem. But because the model has so many individual states (213 million), I had to develop a few custom algorithms.</p>
     <p>These supplementary algorithms overcome some computational bottlenecks when scaling up discrete-time heterogeneous-agent models to large numbers of individual states and locations. In the hope that someone finds them useful, I've made a separate Github repository for them, in highly-optimized parallelized Julia code.</p>
     <ul>
-      <li>All-at-once interpolating functions and distributions on endogenous gridpoints</li>
+      <li><a href="https://github.com/jeffreyesun/discrete-time-ha-model-toolkit">All-at-once interpolating functions and distributions on endogenous gridpoints</a></li>
     </ul>
     <p>Speedup factor: log n (n = #(gridpoints), relative to individual lookups)</p>
     <p>When solving value functions using backwards induction or simulating distributions forward, if the gridpoints are defined in terms of endogenous quantities (e.g. wealth), you often have to reinterpolate the function or distribution back onto the grid. Existing interpolation libraries look up each gridpoint independently. With n gridpoints, each query is O(log n) and the whole reinterpolation is O(n log n). But if the grid is monotonic, you only need to iterate over each grid once, which you can do in O(n) time.</p>
     <p>Reinterpolating is slightly different for functions and distributions, since distribution approximations depend on the density of gridpoints.</p>
     <ul>
-      <li>Computing choice probabilities for heterogeneous agents with a single matrix multiplication</li>
+      <li><a href="https://github.com/jeffreyesun/discrete-time-ha-model-toolkit">Computing choice probabilities for heterogeneous agents with a single matrix multiplication</a></li>
     </ul>
     <p>Speedup factor: up to n<sup>0.62</sup> or so, with big improvement on constant (if n = #(locations), relative to naive approach)</p>
     <p>With n locations and m possible within-location agent states, if agents receive Gumbel-distributed location preferences, then to solve for the value function and choice probabilities, you have to solve for n*n*m possible agent-choice pairs. Luckily, this can be constructed as a single matrix multiplication, which can even be done non-allocatingly if set up properly. Highly-optimized linear algebra libraries can then be used.</p>
     <ul>
-      <li>All-at-once solving monotone decision function for heterogenous agents</li>
+      <li><a href="https://github.com/jeffreyesun/discrete-time-ha-model-toolkit">All-at-once solving monotone decision function for heterogenous agents</a></li>
     </ul>
     <p>Speedup factor: n (n = #(gridpoints), relative to naive individual lookups. Speedup factor log n over optimized individual lookups)</p>
     <p>In many models, agents must make consumption savings decisions. Assuming a discretized wealth grid, the most flexible solution is to maximize over all possible continuation values for each agent, but this requires O(n<sup>2</sup>) total computations. If both continuation value and optimal saving are increasing in wealth, each agent needs only consider possible choices that lie between the choices of adjacent agents. By using binary search for individual lookups and a form of modified binary search to constrain the search space for individual agents, we can compute the optimal decisions of n agents who differ only by wealth using only 2n computations.</p>
