@@ -806,6 +806,13 @@
   letter-spacing: .01rem;
  }
  
+ .about-header {
+  font-size: 1.5rem !important;
+  margin-left: 21px;
+  text-align: start;
+  letter-spacing: .01rem;
+ }
+ 
  .about-sub-title {
    text-align: start;
    margin-left: 7vw;
@@ -831,10 +838,7 @@
  }
  
  .contact-us-div {
-   padding-top: 7vh;
-   padding-bottom: 7vh;
-   padding-left: 7vw;
-   padding-right: 7vw;
+   padding-top: 1vh;
  }
  
  .info-location {
@@ -988,6 +992,7 @@
    text-align: center;
    margin-bottom: 0px;
    font-family: 'helvetica', serif;
+   font-size: 1.5rem;
  }
  
  
