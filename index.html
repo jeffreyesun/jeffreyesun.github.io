@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jeffrey E. Sun</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0" nonce="6eIcl1gX"></script>
+  <link rel="stylesheet" href="milligram.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maitree&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Merriweather&display=swap" rel="stylesheet">
+  <script>
+    function toggleMenuIfOpen() {
+      console.log("Test.");
+      let toggle = document.getElementById('menu-toggle');
+      console.log(toggle.checked);
+      if(document.getElementById('menu-toggle').checked === true)
+      {
+        document.getElementById('menu-toggle').checked = false;
+      }
+    }
+  </script>
+</head>
+<body class="easy-reading">
+
+<div class="container">
+  <header class="sticky-menu">
+    <span class ='nav-heading nav-brand'>Jeffrey E. Sun</span>
+    <input type ='checkbox' class = 'menu-toggle' id ='menu-toggle'>
+    <nav class="header">
+      <ul>
+        <li class="menu-item"><a class="church-title" href="#home" onclick="toggleMenuIfOpen();">Home</a></li>
+        <li class="menu-item"><a class="church-title" href="https://www.dropbox.com/scl/fi/ds70730fz9ws1n6tz7nul/CV.pdf?rlkey=qgni7v1zdmhj4a3f2jb7cn0s7" onclick="toggleMenuIfOpen();">CV</a></li>
+        <li class="menu-item"><a class="church-title" href="#working_papers" onclick="toggleMenuIfOpen();">Research</a></li>
+        <li class="menu-item"><a class="church-title" href="https://github.com/jeffreyesun" onclick="toggleMenuIfOpen();">Code</a></li>
+        <li class="menu-item"><a class="church-title" href="#contact_us" onclick="toggleMenuIfOpen();">Contact</a></li>
+      </ul>
+    </nav>
+    <label for='menu-toggle' class='menu-nav-toggle'>
+      <span>  </span>
+    </label>
+  </header>
+  <div id="home" class="about-us-div">
+    
+    <div id="my_details" class="details-container">
+      <img id="reader" alt="Portrait of Jeffrey E. Sun" class="reader-image" src="./images/Jeffrey_Sun-6032.jpg">
+      <div id="reader-bio" class="reader-bio-full">
+          <h3 class="about-title">Jeffrey E. Sun</h3>
+          <p class="about-body">I am a Ph.D. student in Economics at Princeton University.
+            <br /><br />
+            I will be on the 2023-2024 economics job market.
+            <br /><br />
+            My research adapts and advances tools from macroeconomics and trade to study inequality and the economic consequences of climate change.
+            <br /><br />
+            Contact: <a href="mailto:jesun@princeton.edu">jesun@princeton.edu</a>
+            <br /><br />
+            CV: <a href="https://www.dropbox.com/scl/fi/ds70730fz9ws1n6tz7nul/CV.pdf?rlkey=qgni7v1zdmhj4a3f2jb7cn0s7">Click Here</a>
+          </p>
+      </div>
+    </div>
+
+    <div id="reader-bio" class="reader-bio-mobile">
+        <h3 class="about-title">Jeffrey E. Sun</h3>
+        <p class="about-body">I am a Ph.D. student in Economics at Princeton University.
+          <br /><br />
+          I will be on the 2023-2024 economics job market.
+          <br /><br />
+          My research adapts and advances tools from macroeconomics and trade to study inequality and the economic consequences of climate change.
+          <br /><br />
+          Contact: <a href="mailto:jesun@princeton.edu">jesun@princeton.edu</a>
+          <br /><br />
+          CV: <a class="proper-link" href="https://www.dropbox.com/scl/fi/ds70730fz9ws1n6tz7nul/CV.pdf?rlkey=qgni7v1zdmhj4a3f2jb7cn0s7">Click Here</a>
+        </p>
+    </div>
+  </div>
+
+  <div id="papers" class="services-class">
+    <br />
+  
+    <hr class="forward-line" />
+  <h3 class="forward-title"><a class="proper-link" href="https://www.jeffreyesun.com/jmp.pdf">“The Distributional Consequences of Climate Change: The Role of Housing Wealth, Expectations, and
+    Uncertainty”</a></h3>
+  
+
+  <p class="forward">Job Market Paper</p>
+  <p class="forward">In the United States, the majority of the median household's wealth is in the form of a single climate-exposed asset: their home. The value of that home nonlinearly reflects current expectations and uncertainty
+  about the future of its local economy and climate. To quantitatively understand the impact of different
+  climate scenarios on household wealth, I build a dynamic spatial model of the U.S. with 1713 locations.
+  Forward-looking heterogeneous households choose location, housing, and housing investment in spatially-segmented housing markets, endogenizing local rent and real estate prices. I find the global solution under
+  aggregate climate uncertainty using a novel but simple and highly general deep learning method. To
+  quantify the model, I harmonize and combine recent estimates on the impact of global climate conditions
+  on local productivity, amenities, maintenance costs, and disaster risk. I calibrate a stochastic global climate
+  process using projections from the climate literature and discipline uncertainty using historical homeowners
+  insurance premia and payouts. In the calibrated model, climate change, in expectation, exacerbates existing
+  wealth inequality. While wealthier households are more exposed to climate risk through housing assets, in
+  equilibrium they benefit from the resulting endogenous risk premium on those assets. This risk premium
+  and its regressive implication arise only in the global solution.</p>
+</div>
+
+  <hr class="forward-line" id="research">
+
+  <br />
+  
+  <p type="button" class="collapsible">Interactive Model Results</p>
+  <div class="collapsible-content">
+    <p>Lorem ipsum...</p>
+  </div>
+  <br />
+  
+  <p type="button" class="collapsible">Highly Optimized Algorithms for Macro and Spatial Economics</p>
+  <div class="collapsible-content">
+    <p>Lorem ipsum...</p>
+  </div>
+
+  <br id="working_papers" />
+
+  <hr class="forward-line" />
+  
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+  <h2 class="about-title">Working Papers:</h2>
+  <br />
+  <h3 class="forward-title"><a class="proper-link" href="https://www.jeffreyesun.com/jmp.pdf">“The Distributional Consequences of Climate Change: The Role of Housing Wealth, Expectations, and
+    Uncertainty”</a></h3>
+  <h3 class="forward-title"><a class="proper-link" href="https://www.jeffreyesun.com/jmp.pdf">“Large Indirect Effects of Renewable Portfolio Standards on Carbon Emissions”</a></h3>
+  <br />
+  <hr class="forward-line" />
+  <h2 class="about-title">Work in Progress:</h2>
+  <br />
+  <h3 class="forward-title">“Continuation Value Is All You Need: A Simple, General Deep Learning Method for Globally Solving
+    Recursive Economic Models with Aggregate Uncertainty”</h3>
+  <h3 class="forward-title">“Learning From Coworkers in General Equilibirum: Worker Sorting and the Rise of Inequality” (with
+    Gregor Jarosch, Ezra Oberfield, and Esteban Rossi-Hansberg)</h3>
+    <br />
+  <hr class="forward-line" />
+  <h2 class="about-title">Publications:</h2>
+  <h3 class="about-title">Mathematics</h3>
+  <h3 class="forward-title">Bora, S., Damelin, S., Kaiser, D., & Sun, J. (2023), An algebraic-coding equivalence to the maximum
+  distance separable conjecture,
+  Involve, a Journal of Mathematics
+  , Forthcoming.</h3>
+  <h3 class="forward-title">G&uuml;nt&uuml;rk&uuml;n, S., Jeffries, J., & Sun, J. (2020). Polarization of neural rings.
+  Journal of Algebra and Its
+  Applications
+  , 19(08), 2050146.</h3>
+  <h3 class="forward-title">Hua, M., Damelin, S. B., Sun, J., & Yu, M. (2017). The truncated and supplemented Pascal matrix and
+  applications.
+  Involve, a Journal of Mathematics
+  , 11(2), 243-251</h3>
+  <br />
+  <hr class="forward-line" />
+  <h2 class="info-atom">Contact</h2>
+  
+  <div id="contact_us" class="contact-us-div">
+    <div class="contact-div">
+      <div class="contact-container">
+        <div class="contact-full">
+          <p class="info-atom">Name: Jeffrey E. Sun</p>
+          <p class="info-atom">Phone: (734) 834-9185</p>
+          <p class="info-atom">Email: <a href="mailto:jesun@princeton.edu">jesun@princeton.edu</a></p>
+          <p class="info-atom">
+            Department of Economics
+            <br />
+            Julis Romo Rabinowitz Building
+            <br />
+            Princeton University
+            <br />
+            Princeton, NJ 08544</p>
+        </div>
+        <div class="contact-mobile">
+          <p class="info-atom">Name: Jeffrey E. Sun</p>
+          <p class="info-atom">Phone: (734) 834-9185</p>
+          <p class="info-atom">Email: <a href="mailto:jesun@princeton.edu">jesun@princeton.edu</a></p>
+          <p class="info-atom">
+            Department of Economics
+            <br />
+            Julis Romo Rabinowitz Building
+            <br />
+            Princeton University
+            <br />
+            Princeton, NJ 08544</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <p class="info-atom">Copyright 2023 Catbelly Designs</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
