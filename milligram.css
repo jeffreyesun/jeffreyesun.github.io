@@ -319,6 +319,40 @@
    }
  }
  
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  h3 {
+    font-size: 1.125rem !important;
+  }
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.125rem !important;
+  }
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  h3 {
+    font-size: 1.25rem !important;
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 2.125rem !important;
+  }
+  h2 {
+    font-size: 1.875rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+}
+ 
  .row {
    display: flex;
    flex-direction: column;
@@ -660,7 +694,7 @@
  .church-title {
    padding: 21px 0;
    font-family: 'Merriweather', 'serif';
-   color: var(--light-cream);
+   color: white;
  }
  
  .church-title:hover {
@@ -723,16 +757,6 @@
      margin-left: 0px;
  }
  
- .service-time {
-   font-weight: 700;
-   font-size: 21pt;
-   text-align: center;
-   vertical-align: middle;
-   display: table-cell;
-   font-family: 'Merriweather', serif;
-   color: var(--theme-sky-blue);
- }
- 
  .carousel {
    scroll-margin-top: 11vh;
    text-align: center;
@@ -771,13 +795,15 @@
    justify-content: start;
    align-items: start;
    scroll-margin-top: 11vh;
-   font-family: 'Merriweather', serif;
+   font-family: 'Helvetica', serif;
    scroll-margin-top: 11vh;
  }
  
  .about-title {
-   margin-left: 21px;
-   text-align: start;
+  font-size: 2rem !important;
+  margin-left: 21px;
+  text-align: start;
+  letter-spacing: .01rem;
  }
  
  .about-sub-title {
@@ -786,6 +812,8 @@
  }
  
  .about-body {
+  font-size: 1.5rem;
+  margin-left: 21px;
    padding-left: 3px;
    padding-right: 3px;
    text-align: start;
@@ -942,7 +970,7 @@
    display: flex;
    flex-direction: column;
    color: var(--theme-sky-green);
-   font-family: 'Merriweather', serif;
+   font-family: 'helvetica', serif;
    flex-wrap: wrap;
    text-align: center;
  }
@@ -952,14 +980,14 @@
    margin: auto;
    display: flex;
    flex-direction: column;
-   font-family: 'Merriweather', serif;
+   font-family: 'helvetica', serif;
    flex-wrap: wrap;
  }
  
  .info-atom {
    text-align: center;
    margin-bottom: 0px;
-   font-family: 'Merriweather', serif;
+   font-family: 'helvetica', serif;
  }
  
  
@@ -1011,6 +1039,10 @@
  
  header input.menu-toggle {
    display: none;
+ }
+
+ b {
+  font-weight: 700;
  }
 
  nav {
@@ -1109,7 +1141,7 @@
  
  .nav-brand {
    font-family: 'Merriweather', serif;
-   color: var(--light-cream);
+   color: white;
    padding-right: 7vw;
  }
  
@@ -1118,11 +1150,13 @@
    font-size: 11pt;
    margin-left: 3vw;
    margin-right: 3vw;
+   line-height: 1.75rem;
  }
  
  .forward-title {
    font-family: 'Helvetica', Sans-Serif;
-   font-size: 16pt;
+   font-size: 2rem;
+   font-weight: 700;
    letter-spacing: 0rem;
    margin-left: 3vw;
    margin-right: 3vw;
