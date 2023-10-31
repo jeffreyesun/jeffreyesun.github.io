@@ -1155,7 +1155,6 @@
  .nav-brand {
    font-family: 'Merriweather', serif;
    color: white;
-   padding-right: 7vw;
  }
  
  .forward {
@@ -1198,6 +1197,7 @@
      -ms-grid-column: 2;
      -ms-grid-column-span: 1;
      grid-column: 2/3;
+     padding-right: 7vw;
    }
    nav {
      all: unset;
