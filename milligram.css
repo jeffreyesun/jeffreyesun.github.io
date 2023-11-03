@@ -855,8 +855,8 @@
  }
 
  .reader-image {
-  width: 30vw;
-  height: auto;
+  /* width: 30vw; */
+  height: 50vh;
   display: block;
   object-fit: cover;
   padding: 21px;
@@ -900,10 +900,7 @@
    .reader-bio-full {
     display: none;
    }
-
-   .reader-image {
-    width: 77vw;
-   }
+   
 
    .contact-full {
     display: none !important;
@@ -918,10 +915,6 @@
  @media only screen and (min-width: 768px) {
    .reader-bio-mobile {
     display: none;
-   }
-
-   .reader-image {
-    width: 30vw;
    }
 
    .church-quote {
