@@ -75,29 +75,37 @@
     </div>
   </div>
 
-  <div id="papers" class="services-class">
-    <br />
+  <hr class="forward-line" />
   
-    <hr class="forward-line" style="margin-bottom: 1ex;" />
-    <h3 class="forward-title" style="margin-bottom: 0cm;" ><b>Job Market Paper</b></h3>
-    <h3 class="forward-title"><a class="proper-link" href="https://www.jeffreyesun.com/jmp.pdf"><b></b>“The Distributional Consequences of Climate Change: Housing Wealth, Expectations, and Uncertainty”</b></a></h3>
-    <h3 class="forward-title" style="margin-top: 0cm;"><a class="proper-link" href="https://github.com/jeffreyesun/job-market-paper-code"><b></b>Code</b></a></h3>
+  <h2 class="about-title">Working Papers</h2>
+  <ul>
+    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/jmp.pdf"><b>The Distributional Consequences of Climate Change: Housing Wealth, Expectations, and Uncertainty</b></a></li>
+    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/CV_is_all_you_need.pdf"><b>Continuation Value Is All You Need: "Drop-In" Deep Learning for Heterogeneous-Agent Models With Aggregate Shocks</b></a>
+    <a class="proper-link" href="https://www.jeffreyesun.com/CV_is_all_you_need_slides.pdf">[Slides]</a>
+    <a class="proper-link" href="https://github.com/jeffreyesun/CV-is-all-you-need-code">[Code]</a>
+    (Note: Slides are currently more up-to-date than the paper)
+    </li>
+    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/RPS.pdf"><b>Indirect Effects of Renewable Portfolio Standards on Carbon Emissions</b></a></li>
+    <li class="paper-title"><a class="proper-link" href="https://static1.squarespace.com/static/6334ef03eb02b95245b3c328/t/67fe981f449738202f8f4965/1744738350049/Climate_Shock_Mitigation_and_Market_Competition.pdf"><b>Does Market Power in Agricultural Markets Hinder Farmer Climate Change Adaptation?</b> (With Rajat Kochhar and Ruozi Song)</a></li>
+  </ul>
+  <hr class="forward-line" />
 
+  <h2 class="about-title">Work in Progress</h2>
+  <ul>
+    <li class="paper-title"><b>Learning From Coworkers in General Equilibrium: Worker Sorting and the Rise of Inequality</b> (with
+      Gregor Jarosch, Ezra Oberfield, and Esteban Rossi-Hansberg)</li>
+    <li class="paper-title"><b>Carbon Taxes in an Interconnected Economy</b> (With Rafael Dix-Carneiro, Saverio Spinella, and Sharon Traiberman)
+    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/green_transitions.pdf"><b>Green Transitions Into Alternate Histories</b></a> (With Konstantin Kucharyavyy)
+  </ul>
+  <hr class="forward-line" />
 
-    <p class="forward">The median US household holds most of its wealth in one immobile, climate-exposed asset: the home. I study the implications of this fact for the distributional consequences of climate change, using a dynamic, stochastic, heterogeneous-agent model with 1713 locations. Forward-looking equilibrium real estate prices and rents endogenously respond to climate news shocks in spatially-segmented markets. Households participate on both sides of each market. To quantify climate impacts on economic fundamentals, I harmonize recent estimates of local productivity, amenities, energy costs, and disaster damage sensitivities. I find the model’s global solution under aggregate climate uncertainty with a simple but general deep learning method introduced in a companion paper. In the calibrated model, a switch from widespread climate denial to widespread climate acceptance causes an effective transfer of housing wealth across regions of $41bn immediately and $507bn over the following century. Migration exacerbates this by amplifying housing price responses. The spatially-equalizing effects of migration only dominate for all households 50 years post-shock. Climate uncertainty causes ongoing regressive wealth transfers through higher equilibrium rents, borne mostly by poorer households.</p>
-</div>
+  <h2 class="about-title">Other Computational Notes</h2>
+  <ul>
+    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/solving_models_by_decomposition.pdf"><b>Atomistic Agents: Solving Models by Decomposition</b></a></li>
+    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/auto_implicit_diff.pdf"><b>Granular Agents: Implicit Automatic Differentiation</b></a></li>
+  </ul>
 
-  <br />
-  
-  <!--
-  <p type="button" class="collapsible">Interactive Model Results</p>
-  <div class="collapsible-content">
-    <p>Coming Soon!</p>
-  </div>
-  <br />
-  -->
-  
-  <p type="button" class="collapsible">Numerical Methods Overview</p>
+  <p type="button" class="collapsible">Job Market Paper Numerical Methods Notes</p>
   <div id="working_papers" class="collapsible-content">
     <p>The primary numerical methods contribution in this paper is a new deep learning method for solving heterogeneous-agent models with aggregate uncertainty. This method uses neural networks to predict the conditional continuation values resulting from household actions, but does not use neural networks to approximate household policy functions. Details of this methodology are available in a <a href="https://www.jeffreyesun.com/CV_is_all_you_need.pdf">companion paper</a>.</p>
     <p>The key insight of the deep learning method is that, if a household knows the current utility and continuation values resulting from any action, then conventional methods can be used to solve the policy function. With one or two dimensions of heterogeneity, this is generally no problem. But because the model has so many individual states (213 million), I had to develop a few custom algorithms.</p>
@@ -119,10 +127,7 @@
     <p>Speedup factor: n (n = #(gridpoints), relative to naive individual lookups. Speedup factor log n over optimized individual lookups)</p>
     <p>In many models, agents must make consumption savings decisions. Assuming a discretized wealth grid, the most flexible solution is to maximize over all possible continuation values for each agent, but this requires O(n<sup>2</sup>) total computations. If both continuation value and optimal saving are increasing in wealth, each agent needs only consider possible choices that lie between the choices of adjacent agents. By using binary search for individual lookups and a form of modified binary search to constrain the search space for individual agents, we can compute the optimal decisions of n agents who differ only by wealth using only 2n computations.</p>
   </div>
-
-  <hr class="forward-line" />
-  
-  <script>
+    <script>
   var coll = document.getElementsByClassName("collapsible");
   var i;
   
@@ -138,34 +143,7 @@
     });
   }
   </script>
-  <h2 class="about-title">Working Papers</h2>
-  <ul>
-    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/jmp.pdf"><b>The Distributional Consequences of Climate Change: Housing Wealth, Expectations, and Uncertainty</b></a>, Job Market Paper</li>
-    <li class="paper-title">
-      <a class="proper-link" href="https://www.jeffreyesun.com/CV_is_all_you_need.pdf"><b>Continuation Value Is All You Need: "Drop-In" Deep Learning for Heterogeneous-Agent Models With Aggregate Shocks</b></a>
-      <a class="proper-link" href="https://www.jeffreyesun.com/CV_is_all_you_need_slides.pdf">[Slides]</a>
-      <a class="proper-link" href="https://github.com/jeffreyesun/CV-is-all-you-need-code">[Code]</a>
-      (Note: Slides are currently more up-to-date than the paper)
-    </li>
-    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/RPS.pdf"><b>Indirect Effects of Renewable Portfolio Standards on Carbon Emissions</b></a></li>
-    <li class="paper-title"><a class="proper-link" href="https://static1.squarespace.com/static/6334ef03eb02b95245b3c328/t/67fe981f449738202f8f4965/1744738350049/Climate_Shock_Mitigation_and_Market_Competition.pdf"><b>Does Market Power in Agricultural Markets Hinder Farmer Climate Change Adaptation?</b> (With Rajat Kochhar and Ruozi Song)</a></li>
-  </ul>
-  <hr class="forward-line" />
 
-  <h2 class="about-title">Work in Progress</h2>
-  <ul>
-    <li class="paper-title"><b>Learning From Coworkers in General Equilibrium: Worker Sorting and the Rise of Inequality</b> (with
-      Gregor Jarosch, Ezra Oberfield, and Esteban Rossi-Hansberg)</li>
-    <li class="paper-title"><b>Carbon Taxes in an Interconnected Economy</b> (With Rafael Dix-Carneiro, Saverio Spinella, and Sharon Traiberman)
-    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/green_transitions.pdf"><b>Green Transitions Into Alternate Histories</b></a> (With Konstantin Kucharyavyy)
-  </ul>
-  <hr class="forward-line" />
-
-  <h2 class="about-title">Other Computational Notes</h2>
-  <ul>
-    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/solving_models_by_decomposition.pdf"><b>Atomistic Agents: Solving Models by Decomposition</b></a></li>
-    <li class="paper-title"><a class="proper-link" href="https://www.jeffreyesun.com/auto_implicit_diff.pdf"><b>Granular Agents: Implicit Automatic Differentiation</b></a></li>
-  </ul>
   <hr class="forward-line" />
 
   <h2 class="about-title">Advice for Students</h2>
