@@ -1,0 +1,426 @@
+/* ================================================================
+   Jeffrey E. Sun — Academic Website
+   Ground-up stylesheet
+   ================================================================ */
+
+/* ----------------------------------------------------------------
+   CSS Variables
+   ---------------------------------------------------------------- */
+:root {
+  --bg:           #ffffff;
+  --text:         #2d2d2d;
+  --text-muted:   #666666;
+  --heading:      #111111;
+  --accent:       #1a5276;
+  --accent-hover: #154360;
+  --nav-bg:       #1d2b3a;
+  --nav-text:     #f0f0f0;
+  --nav-hover:    #a8c4d8;
+  --divider:      #e0e0e0;
+  --nav-height:   60px;
+}
+
+/* ----------------------------------------------------------------
+   Reset & Base
+   ---------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover, a:focus {
+  color: var(--accent-hover);
+  text-decoration-color: var(--accent-hover);
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--divider);
+  margin: 2.5rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  color: var(--heading);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* ----------------------------------------------------------------
+   Layout Container
+   ---------------------------------------------------------------- */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ----------------------------------------------------------------
+   Navigation
+   ---------------------------------------------------------------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+  background-color: var(--nav-bg);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+
+.nav-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 28px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand a {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--nav-text);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.nav-brand a:hover {
+  color: var(--nav-hover);
+  text-decoration: none;
+}
+
+/* Desktop nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--nav-text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--nav-hover);
+  text-decoration: none;
+}
+
+/* Mobile hamburger */
+.menu-toggle-input {
+  display: none;
+}
+
+.menu-toggle-label {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menu-toggle-label span,
+.menu-toggle-label span::before,
+.menu-toggle-label span::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--nav-text);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle-label span::before,
+.menu-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.menu-toggle-label span::before { top: -7px; }
+.menu-toggle-label span::after  { top:  7px; }
+
+/* Mobile nav panel */
+@media (max-width: 640px) {
+  .menu-toggle-label {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background-color: var(--nav-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0.5rem 0 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.75rem 28px;
+    font-size: 0.9rem;
+  }
+
+  .menu-toggle-input:checked ~ .nav-links {
+    display: flex;
+  }
+}
+
+/* ----------------------------------------------------------------
+   Main Content
+   ---------------------------------------------------------------- */
+main {
+  padding-top: calc(var(--nav-height) + 2.5rem);
+  padding-bottom: 4rem;
+}
+
+/* ----------------------------------------------------------------
+   Hero / About Section
+   ---------------------------------------------------------------- */
+.about-section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.about-photo {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.about-name {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.about-body {
+  font-size: 0.98rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.about-body p {
+  margin-bottom: 0.85rem;
+}
+
+.about-body a {
+  text-decoration-color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------------
+   Section Headings
+   ---------------------------------------------------------------- */
+.section-heading {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+.subsection-heading {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ----------------------------------------------------------------
+   Paper / Item Lists
+   ---------------------------------------------------------------- */
+.paper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.5rem;
+}
+
+.paper-list li {
+  padding: 0.55rem 0 0.55rem 1.1rem;
+  border-left: 2px solid var(--divider);
+  margin-bottom: 0.75rem;
+  font-size: 0.965rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.paper-list li a {
+  text-decoration-color: transparent;
+}
+
+.paper-list li a:hover {
+  text-decoration-color: var(--accent-hover);
+}
+
+.paper-meta {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.paper-links {
+  font-size: 0.875rem;
+  margin-top: 0.2rem;
+}
+
+.paper-links a {
+  margin-right: 0.5rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* ----------------------------------------------------------------
+   Collapsible
+   ---------------------------------------------------------------- */
+.collapsible-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  border-left: 3px solid var(--accent);
+  padding: 0.45rem 0.85rem;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0;
+  transition: color 0.15s ease;
+}
+
+.collapsible-toggle:hover {
+  color: var(--accent-hover);
+}
+
+.collapsible-toggle::after {
+  content: '+';
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.collapsible-toggle.active::after {
+  content: '−';
+}
+
+.collapsible-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-out;
+  background: #f4f7fa;
+  border-left: 3px solid var(--accent);
+}
+
+.collapsible-body-inner {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.collapsible-body-inner p {
+  margin-bottom: 0.85rem;
+}
+
+.collapsible-body-inner ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.collapsible-body-inner ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* ----------------------------------------------------------------
+   Footer
+   ---------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--divider);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
