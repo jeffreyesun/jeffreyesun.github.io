@@ -224,7 +224,7 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
   }
 
-  .menu-toggle-input:checked ~ .nav-links {
+  .menu-toggle-input:checked ~ nav .nav-links {
     display: flex;
   }
 }
