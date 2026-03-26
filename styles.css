@@ -279,7 +279,8 @@ main {
   }
 
   .about-photo {
-    display: none;
+    width: 160px;
+    margin: 0 auto 1rem;
   }
 }
 
