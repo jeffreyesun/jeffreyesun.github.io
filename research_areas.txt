@@ -1,0 +1,6 @@
+Three areas of research:
+1. What will the effects of climate change be, interpreting climate science projections in equilibrium models? (Housing prices)
+2. How can we reduce emissions by fixing market failures? (Forestry, agricultural market power, coordination problems and path dependence, green finance)
+3. How can we develop richer economic models?
+
+(This is basically a private note, even though it's in a public repo. But if these topics interest you, get in touch!)
