@@ -1,0 +1,223 @@
+# robots.txt
+#
+# Applies to everything served from this domain.
+#
+# Search engines are welcome, and so are AI assistants that answer a question by
+# citing and linking their source. Please index this site.
+#
+# What is refused is training. The material here is copyrighted, and no license is
+# granted to use any of it as machine-learning training data, or to collect it into
+# a dataset or corpus for that purpose. Rights, including text-and-data-mining
+# rights, are expressly reserved under Art. 4(3) of EU Directive 2019/790 and
+# equivalent provisions elsewhere.
+
+# ---------------------------------------------------------------------------
+# Search engines and citing assistants: welcome.
+# ---------------------------------------------------------------------------
+
+# Conventional search engines. Googlebot also grounds Google's AI Overviews and
+# AI Mode, which cannot be declined separately without `nosnippet` — and
+# `nosnippet` would strip our ordinary search snippets too, so we accept it.
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-News
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: Qwantbot
+User-agent: Kagibot
+User-agent: MojeekBot
+User-agent: Marginalia
+User-agent: Baiduspider
+User-agent: YandexBot
+Allow: /
+Content-Usage: train-ai=n
+
+# Apple search (Siri, Spotlight, Safari suggestions). Apple's training crawler
+# is the separate `Applebot-Extended` token, which is disallowed below.
+User-agent: Applebot
+Allow: /
+Content-Usage: train-ai=n
+
+# AI answer engines that cite and link their sources. OpenAI, Anthropic,
+# Perplexity, DuckDuckGo and Mistral all document these agents as search or
+# user-triggered retrieval, separate from their training crawlers.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: DuckAssistBot
+User-agent: MistralAI-User
+User-agent: YouBot
+Allow: /
+Content-Usage: train-ai=n
+
+# Social link previews. These generate the card that appears when a reader
+# shares a story, which is pure discoverability.
+User-agent: facebookexternalhit
+User-agent: Twitterbot
+User-agent: LinkedInBot
+User-agent: Slackbot-LinkExpanding
+User-agent: redditbot
+Allow: /
+Content-Usage: train-ai=n
+
+# ---------------------------------------------------------------------------
+# Training-data and dataset crawlers: not welcome.
+# ---------------------------------------------------------------------------
+
+# OpenAI (training crawler only; OAI-SearchBot and ChatGPT-User are welcome
+# above)
+User-agent: GPTBot
+Disallow: /
+Content-Usage: ai=n
+
+# Anthropic (training crawlers only; Claude-SearchBot and Claude-User are
+# welcome above)
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+Disallow: /
+Content-Usage: ai=n
+
+# Google, training and non-search crawlers only. Google-Extended governs
+# Gemini/Vertex training and has no effect on Google Search ranking or
+# indexing.
+User-agent: Google-Extended
+User-agent: Google-CloudVertexBot
+User-agent: GoogleOther
+User-agent: GoogleOther-Image
+User-agent: GoogleOther-Video
+Disallow: /
+Content-Usage: ai=n
+
+# Apple, training only. No effect on Siri, Spotlight, or Safari suggestions.
+User-agent: Applebot-Extended
+Disallow: /
+Content-Usage: ai=n
+
+# Meta
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
+User-agent: FacebookBot
+Disallow: /
+Content-Usage: ai=n
+
+# Amazon
+User-agent: Amazonbot
+User-agent: Novaact
+Disallow: /
+Content-Usage: ai=n
+
+# ByteDance
+User-agent: Bytespider
+User-agent: TikTokSpider
+Disallow: /
+Content-Usage: ai=n
+
+# Common Crawl, a primary source of LLM training corpora
+User-agent: CCBot
+Disallow: /
+Content-Usage: ai=n
+
+# Cohere
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+Disallow: /
+Content-Usage: ai=n
+
+# Allen Institute for AI
+User-agent: AI2Bot
+User-agent: AI2Bot-Dolma
+Disallow: /
+Content-Usage: ai=n
+
+# Webz.io, which resells scraped text as training data
+User-agent: omgili
+User-agent: omgilibot
+User-agent: Webzio-Extended
+Disallow: /
+Content-Usage: ai=n
+
+# Diffbot
+User-agent: Diffbot
+Disallow: /
+Content-Usage: ai=n
+
+# ImageSift
+User-agent: ImagesiftBot
+Disallow: /
+Content-Usage: ai=n
+
+# Timpi
+User-agent: Timpibot
+Disallow: /
+Content-Usage: ai=n
+
+# Huawei
+User-agent: PanguBot
+Disallow: /
+Content-Usage: ai=n
+
+# Semrush AI corpus crawlers
+User-agent: SemrushBot-OCOB
+User-agent: SemrushBot-SWA
+Disallow: /
+Content-Usage: ai=n
+
+# Kangaroo LLM
+User-agent: Kangaroo Bot
+Disallow: /
+Content-Usage: ai=n
+
+# Scraping and dataset services
+User-agent: Scrapy
+User-agent: VelenPublicWebCrawler
+User-agent: FirecrawlAgent
+User-agent: Crawlspace
+Disallow: /
+Content-Usage: ai=n
+
+# iAsk
+User-agent: iaskspider/2.0
+Disallow: /
+Content-Usage: ai=n
+
+# ProRata
+User-agent: ProRataInc
+Disallow: /
+Content-Usage: ai=n
+
+# Liner
+User-agent: LinerBot
+Disallow: /
+Content-Usage: ai=n
+
+# SB Intuitions
+User-agent: SBIntuitionsBot
+Disallow: /
+Content-Usage: ai=n
+
+# Poseidon Research
+User-agent: Poseidon Research Crawler
+Disallow: /
+Content-Usage: ai=n
+
+# Bulk image and text dataset builders
+User-agent: img2dataset
+User-agent: QualifiedBot
+User-agent: TerraCotta
+Disallow: /
+Content-Usage: ai=n
+
+# ---------------------------------------------------------------------------
+# Everyone else: crawl and index freely, but do not train on this.
+# "Content-Usage" follows the IETF AIPREF vocabulary; "train-ai=n" withholds
+# permission to use this content as training data while leaving search,
+# retrieval, and citation permitted.
+# ---------------------------------------------------------------------------
+User-agent: *
+Allow: /
+Content-Usage: train-ai=n

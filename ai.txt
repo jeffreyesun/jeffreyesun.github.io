@@ -1,0 +1,48 @@
+# ai.txt
+#
+# Applies to everything served from this domain.
+#
+# This file withholds permission to use any file served here in the training,
+# fine-tuning, or evaluation of any AI or machine-learning model, and to collect it
+# into any dataset or corpus assembled for that purpose.
+#
+# It is not an objection to being found: search engines and citing AI assistants
+# are welcome, and are allowed explicitly in robots.txt.
+#
+# Format: https://site.spawning.ai/spawning-ai-txt
+
+User-Agent: *
+Disallow: *.txt
+Disallow: *.pdf
+Disallow: *.doc
+Disallow: *.docx
+Disallow: *.odt
+Disallow: *.rtf
+Disallow: *.epub
+Disallow: *.md
+Disallow: *.html
+Disallow: *.htm
+Disallow: *.xml
+Disallow: *.json
+Disallow: *.csv
+Disallow: *.jpg
+Disallow: *.jpeg
+Disallow: *.png
+Disallow: *.gif
+Disallow: *.webp
+Disallow: *.svg
+Disallow: *.tif
+Disallow: *.tiff
+Disallow: *.bmp
+Disallow: *.psd
+Disallow: *.ai
+Disallow: *.eps
+Disallow: *.mp3
+Disallow: *.wav
+Disallow: *.ogg
+Disallow: *.flac
+Disallow: *.mp4
+Disallow: *.mov
+Disallow: *.webm
+Disallow: *.avi
+Disallow: *.mkv
