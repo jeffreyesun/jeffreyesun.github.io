@@ -303,9 +303,6 @@ main {
   color: var(--heading);
   margin-top: 0;
   margin-bottom: 1.25rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
 }
 
 .subsection-heading {
@@ -327,8 +324,7 @@ main {
 }
 
 .paper-list li {
-  padding: 0.55rem 0 0.55rem 1.1rem;
-  border-left: 2px solid var(--divider);
+  padding: 0.55rem 0;
   margin-bottom: 0.75rem;
   font-size: 0.965rem;
   line-height: 1.6;
@@ -363,14 +359,19 @@ main {
 /* ----------------------------------------------------------------
    Collapsible
    ---------------------------------------------------------------- */
+.collapsible {
+  background: #f3f3f3;
+}
+
 .collapsible-toggle {
-  display: inline-flex;
+  display: flex;
+  width: 100%;
   align-items: center;
   gap: 0.4rem;
   background: none;
   border: none;
-  border-left: 3px solid var(--accent);
-  padding: 0.45rem 0.85rem;
+  padding: 0.6rem 1rem;
+  text-align: left;
   color: var(--accent);
   font-family: inherit;
   font-size: 0.9rem;
@@ -399,12 +400,10 @@ main {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.25s ease-out;
-  background: #f4f7fa;
-  border-left: 3px solid var(--accent);
 }
 
 .collapsible-body-inner {
-  padding: 1.25rem 1.5rem;
+  padding: 0.25rem 1.5rem 1.25rem;
   font-size: 0.92rem;
   line-height: 1.75;
 }

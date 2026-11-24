@@ -68,8 +68,8 @@
           <div class="paper-meta">Note: Slides are currently more up-to-date than the paper.</div>
         </li>
         <li>
-          <a href="https://www.jeffreyesun.com/RPS.pdf"><strong>Indirect Effects of Renewable Portfolio Standards on Carbon Emissions</strong></a>
-          <div class="paper-meta">with Matthew Azevedo</div>
+          <a href="https://www.jeffreyesun.com/Decarbonization.pdf"><strong>The Distributional Impacts of Decarbonization Policies</strong></a>
+          <div class="paper-meta">with Rafael Dix-Carneiro, Saverio Spinella, and Sharon Traiberman</div>
         </li>
         <li>
           <a href="https://static1.squarespace.com/static/6334ef03eb02b95245b3c328/t/67fe981f449738202f8f4965/1744738350049/Climate_Shock_Mitigation_and_Market_Competition.pdf"><strong>Does Market Power in Agricultural Markets Hinder Farmer Climate Change Adaptation?</strong></a>
@@ -89,8 +89,8 @@
           <div class="paper-meta">with Gregor Jarosch, Ezra Oberfield, and Esteban Rossi-Hansberg</div>
         </li>
         <li>
-          <strong>The Distributional Impacts of Decarbonization Policies</strong>
-          <div class="paper-meta">with Rafael Dix-Carneiro, Saverio Spinella, and Sharon Traiberman</div>
+          <a href="https://www.jeffreyesun.com/RPS.pdf"><strong>Indirect Effects of Renewable Portfolio Standards on Carbon Emissions</strong></a>
+          <div class="paper-meta">with Matthew Azevedo</div>
         </li>
         <li>
           <a href="https://www.jeffreyesun.com/green_transitions.pdf"><strong>Green Transitions Into Alternate Histories</strong></a>
@@ -132,10 +132,11 @@
         </li>
       </ul>
 
-      <button class="collapsible-toggle" id="jmp-toggle">Some Notes on Stage Optimizations</button>
+      <div class="collapsible">
+        <button class="collapsible-toggle" id="jmp-toggle">Some Notes on Stage Optimizations</button>
       <div class="collapsible-body" id="jmp-notes">
         <div class="collapsible-body-inner">
-          <p>One of the reasons it can be useful to aggressively decompose household blocks into stages, as I advocate, is that individual stages can be optimized by computational researchers, then used off the shelf by practitioners. This dropdown contains some examples of such optimizations, which are part of what makes <a href="https://github.com/jeffreyesun/HouseholdStages.jl"><strong>HouseholdStages.jl</strong></a> so fast.</p>
+          <p>One of the reasons it can be useful to decompose household blocks into stages, as I advocate, is that individual stages can be optimized by computational researchers, then used off the shelf by practitioners. This dropdown contains some examples of such optimizations, which are part of what makes <a href="https://github.com/jeffreyesun/HouseholdStages.jl"><strong>HouseholdStages.jl</strong></a> so fast.</p>
           <ul>
             <li><a href="https://github.com/jeffreyesun/HouseholdStages.jl/blob/main/src/helper/interpolations.jl">All-at-once interpolating functions and distributions on endogenous gridpoints</a></li>
           </ul>
@@ -153,6 +154,7 @@
           <p>Speedup factor: n (n = #(gridpoints), relative to naive individual lookups. Speedup factor log n over optimized individual lookups)</p>
           <p>In many models, agents must make consumption savings decisions. Assuming a discretized wealth grid, the most flexible solution is to maximize over all possible continuation values for each agent, but this requires O(n<sup>2</sup>) total computations. If both continuation value and optimal saving are increasing in wealth, each agent needs only consider possible choices that lie between the choices of adjacent agents. By using binary search for individual lookups and a form of modified binary search to constrain the search space for individual agents, we can compute the optimal decisions of n agents who differ only by wealth using only 2n computations.</p>
         </div>
+      </div>
       </div>
     </section>
 
